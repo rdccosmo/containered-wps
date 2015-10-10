@@ -25,6 +25,6 @@ RUN wget http://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/
     tar -zxvf WPSV3.7.TAR.gz && \
     rm -f WPSV3.7.TAR.gz && \
     cd WPS && \
-    echo 1 | NCARG_ROOT=$PREFIX PATH=$NCARG_ROOT/bin:$PATH NETCDF=$PREFIX ./configure && \
+    echo 1 | NCARG_ROOT=$PREFIX PATH=$NCARG_ROOT/bin:$PATH NETCDF=$PREFIX JASPERLIB=$PREFIX/lib JASPERINC=$PREFIX/include ./configure && \
     ./compile
 
